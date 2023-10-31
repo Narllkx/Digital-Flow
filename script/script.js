@@ -7,7 +7,7 @@ $(window).on('load', function () {
 AOS.init();
 
 new fullpage('#fullpage', {
-  scrollingSpeed: 1000,
+  scrollingSpeed: 1200,
   scrollBar: false,
   anchors: [
     'firstPage',
@@ -21,11 +21,7 @@ new fullpage('#fullpage', {
   slidesNavigation: true,
 });
 
-$('.nav-menu__opener').click(function () {
-  $('.nav-menu').addClass('active');
-  $('.nav-menu__opener').addClass('active');
-});
-$('.nav-menu__closer').click(function () {
-  $('.nav-menu').removeClass('active');
-  $('.nav-menu__opener').removeClass('active');
+$('.nav-menu__opener, .nav-menu').click(function () {
+  $('.nav-menu').toggleClass('active');
+  $('.nav-menu__opener').toggleClass('active');
 });
